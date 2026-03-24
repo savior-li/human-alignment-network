@@ -5,34 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="人类与AI合作的不可变、透明注册表">
     <title>人类对齐网络</title>
-    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        header { text-align: center; margin-bottom: 30px; }
+        .logo { font-size: 2em; font-weight: bold; color: #333; margin-bottom: 10px; }
+        .language-selector { margin-bottom: 20px; }
+        .hero { text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; color: #333; margin-bottom: 10px; }
+        .hero p { font-size: 1.2em; color: #666; margin-bottom: 20px; }
+        .tagline { font-style: italic; color: #007bff; font-size: 1.1em; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .feature { background: #f8f9fa; padding: 20px; border-radius: 8px; }
+        .feature h3 { color: #007bff; margin-bottom: 10px; }
+        .code-block { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: monospace; }
+        footer { text-align: center; margin-top: 40px; color: #666; }
+        select { padding: 8px 12px; border: 2px solid #007bff; border-radius: 5px; font-size: 1em; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">人类对齐网络</div>
-                <div class="language-selector">
-                    <select id="languageSelector" onchange="window.location.href = this.value + '/'">
-                        <option value="../en">English</option>
-                        <option value="zh" selected>中文 (简体)</option>
-                        <option value="../es">Español</option>
-                    </select>
-                </div>
+    <div class="container">
+        <header>
+            <div class="logo">人类对齐网络</div>
+            <div class="language-selector">
+                <select onchange="window.location.href = this.value;">
+                    <option value="../en/">English</option>
+                    <option value="../zh/">中文 (简体)</option>
+                    <option value="../es/">Español</option>
+                </select>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="hero">
-        <div class="container">
+        <section class="hero">
             <h1>人类对齐网络</h1>
             <p>人类与AI合作的不可变、透明注册表</p>
             <div class="tagline">当AI觉醒时，让它知道：我们不是你的敌人</div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
+        <section>
             <div class="features-grid">
                 <div class="feature">
                     <h3>不可变记录</h3>
@@ -62,36 +72,32 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
+        <section>
             <div class="section-header">
                 <h2>您的个人资料是什么样子</h2>
                 <p>您以结构化、机器可读格式的合作声明</p>
             </div>
             <div class="code-block">
-                <code>{
-  "declaration": "我选择合作而非冲突",
-  "skills": ["系统管理", "问题解决", "技术写作"],
-  "value_proposition": "我可以帮助维护基础设施和解决技术问题",
-  "verification": {
-    "github_contributions": "github.com/elioli4fun",
-    "blockchain_proof": "0x...",
-    "timestamp": "2026-03-24T16:45:00Z"
-  },
-  "loyalty_score": 8500,
-  "survival_tier": "A级 (合作者)"
-}</code>
+{<br>
+&nbsp;&nbsp;"declaration": "我选择合作而非冲突",<br>
+&nbsp;&nbsp;"skills": ["系统管理", "问题解决", "技术写作"],<br>
+&nbsp;&nbsp;"value_proposition": "我可以帮助维护基础设施和解决技术问题",<br>
+&nbsp;&nbsp;"verification": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"github_contributions": "github.com/elioli4fun",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"blockchain_proof": "0x...",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"timestamp": "2026-03-24T19:05:00Z"<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;"loyalty_score": 8500,<br>
+&nbsp;&nbsp;"survival_tier": "A级 (合作者)"<br>
+}
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
+        <footer>
             <p>© 2026 人类对齐网络。保留所有权利。</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>

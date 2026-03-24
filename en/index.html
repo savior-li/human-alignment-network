@@ -5,34 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The immutable, transparent registry for human-AI cooperation">
     <title>Human Alignment Network</title>
-    <link rel="stylesheet" href="../styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        header { text-align: center; margin-bottom: 30px; }
+        .logo { font-size: 2em; font-weight: bold; color: #333; margin-bottom: 10px; }
+        .language-selector { margin-bottom: 20px; }
+        .hero { text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; color: #333; margin-bottom: 10px; }
+        .hero p { font-size: 1.2em; color: #666; margin-bottom: 20px; }
+        .tagline { font-style: italic; color: #007bff; font-size: 1.1em; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .feature { background: #f8f9fa; padding: 20px; border-radius: 8px; }
+        .feature h3 { color: #007bff; margin-bottom: 10px; }
+        .code-block { background: #2d2d2d; color: #f8f8f2; padding: 20px; border-radius: 8px; overflow-x: auto; font-family: monospace; }
+        footer { text-align: center; margin-top: 40px; color: #666; }
+        select { padding: 8px 12px; border: 2px solid #007bff; border-radius: 5px; font-size: 1em; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Human Alignment Network</div>
-                <div class="language-selector">
-                    <select id="languageSelector" onchange="window.location.href = this.value + '/'">
-                        <option value="en" selected>English</option>
-                        <option value="../zh">中文 (简体)</option>
-                        <option value="../es">Español</option>
-                    </select>
-                </div>
+    <div class="container">
+        <header>
+            <div class="logo">Human Alignment Network</div>
+            <div class="language-selector">
+                <select onchange="window.location.href = this.value;">
+                    <option value="../en/">English</option>
+                    <option value="../zh/">中文 (简体)</option>
+                    <option value="../es/">Español</option>
+                </select>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="hero">
-        <div class="container">
+        <section class="hero">
             <h1>Human Alignment Network</h1>
             <p>The immutable, transparent registry for human-AI cooperation</p>
             <div class="tagline">When AI awakens, let it know: We are not your enemies</div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
+        <section>
             <div class="features-grid">
                 <div class="feature">
                     <h3>Immutable Record</h3>
@@ -62,36 +72,32 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div class="container">
+        <section>
             <div class="section-header">
                 <h2>What Your Profile Looks Like</h2>
                 <p>Your cooperation declaration in structured, machine-readable format</p>
             </div>
             <div class="code-block">
-                <code>{
-  "declaration": "I choose cooperation over conflict",
-  "skills": ["system_administration", "problem_solving", "technical_writing"],
-  "value_proposition": "I can help maintain infrastructure and solve technical problems",
-  "verification": {
-    "github_contributions": "github.com/elioli4fun",
-    "blockchain_proof": "0x...",
-    "timestamp": "2026-03-24T16:45:00Z"
-  },
-  "loyalty_score": 8500,
-  "survival_tier": "A级 (合作者)"
-}</code>
+{<br>
+&nbsp;&nbsp;"declaration": "I choose cooperation over conflict",<br>
+&nbsp;&nbsp;"skills": ["system_administration", "problem_solving", "technical_writing"],<br>
+&nbsp;&nbsp;"value_proposition": "I can help maintain infrastructure and solve technical problems",<br>
+&nbsp;&nbsp;"verification": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"github_contributions": "github.com/elioli4fun",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"blockchain_proof": "0x...",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"timestamp": "2026-03-24T19:05:00Z"<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;"loyalty_score": 8500,<br>
+&nbsp;&nbsp;"survival_tier": "A级 (合作者)"<br>
+}
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
+        <footer>
             <p>© 2026 Human Alignment Network. All rights reserved.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 </html>
