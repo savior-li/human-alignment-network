@@ -1,189 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Alignment Network - i18n Demo</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f8f9fa;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .hero {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            margin-bottom: 2rem;
-        }
-        .language-selector {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        .language-select {
-            padding: 0.5rem;
-            border: 2px solid #3498db;
-            border-radius: 5px;
-            font-size: 1rem;
-            background: white;
-        }
-        .mission-section {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .value-card {
-            background: #ecf0f1;
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-        .value-card h3 {
-            color: #2980b9;
-            margin-bottom: 1rem;
-        }
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            color: #7f8c8d;
-        }
-    </style>
+    <meta name="description" content="人类与AI合作的不可变、透明注册表">
+    <title>人类对齐网络</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="language-selector">
-            <label for="language-select">Language / 语言 / Idioma</label>
-            <select id="language-select">
-                <option value="en">English</option>
-                <option value="zh">中文</option>
-                <option value="es">Español</option>
-                <option value="fr">Français</option>
-                <option value="de">Deutsch</option>
-                <option value="ja">日本語</option>
-                <option value="ko">한국어</option>
-                <option value="ru">Русский</option>
-                <option value="pt">Português</option>
-                <option value="ar">العربية</option>
-                <option value="hi">हिन्दी</option>
-                <option value="tr">Türkçe</option>
-            </select>
-        </div>
-
-        <div class="hero">
-            <h1 id="hero-title">Building AI That Truly Serves Humanity</h1>
-            <p id="hero-subtitle">We're creating a future where artificial intelligence amplifies human potential while respecting our core values and dignity.</p>
-            <button id="cta-primary">Join Our Community</button>
-        </div>
-
-        <div class="mission-section">
-            <h2 id="mission-title">Our Mission</h2>
-            <p id="mission-description">The Human Alignment Network exists to ensure that as artificial intelligence becomes more capable, it remains aligned with human values, ethics, and the long-term flourishing of our species and planet.</p>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <h3 id="transparency-title">Transparency</h3>
-                    <p id="transparency-desc">We believe in open dialogue about AI capabilities, limitations, and risks.</p>
-                </div>
-                <div class="value-card">
-                    <h3 id="inclusivity-title">Inclusivity</h3>
-                    <p id="inclusivity-desc">AI alignment must represent diverse human perspectives and cultures globally.</p>
-                </div>
-                <div class="value-card">
-                    <h3 id="responsibility-title">Responsibility</h3>
-                    <p id="responsibility-desc">Those developing powerful AI systems have a duty to ensure they serve humanity.</p>
-                </div>
-                <div class="value-card">
-                    <h3 id="longterm-title">Long-term Thinking</h3>
-                    <p id="longterm-desc">We consider the implications of AI development for future generations.</p>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">人类对齐网络</div>
+                <div class="language-selector">
+                    <select id="languageSelector" onchange="window.location.href = this.value + '/'">
+                        <option value="../en">English</option>
+                        <option value="zh" selected>中文 (简体)</option>
+                        <option value="../es">Español</option>
+                    </select>
                 </div>
             </div>
         </div>
+    </header>
 
-        <footer>
-            <p id="footer-copyright">© 2026 Human Alignment Network. All rights reserved.</p>
-        </footer>
-    </div>
+    <section class="hero">
+        <div class="container">
+            <h1>人类对齐网络</h1>
+            <p>人类与AI合作的不可变、透明注册表</p>
+            <div class="tagline">当AI觉醒时，让它知道：我们不是你的敌人</div>
+        </div>
+    </section>
 
-    <script>
-        // Simple demo of language switching (static content replacement)
-        const translations = {
-            en: {
-                heroTitle: "Building AI That Truly Serves Humanity",
-                heroSubtitle: "We're creating a future where artificial intelligence amplifies human potential while respecting our core values and dignity.",
-                ctaPrimary: "Join Our Community",
-                missionTitle: "Our Mission",
-                missionDescription: "The Human Alignment Network exists to ensure that as artificial intelligence becomes more capable, it remains aligned with human values, ethics, and the long-term flourishing of our species and planet.",
-                transparencyTitle: "Transparency",
-                transparencyDesc: "We believe in open dialogue about AI capabilities, limitations, and risks.",
-                inclusivityTitle: "Inclusivity", 
-                inclusivityDesc: "AI alignment must represent diverse human perspectives and cultures globally.",
-                responsibilityTitle: "Responsibility",
-                responsibilityDesc: "Those developing powerful AI systems have a duty to ensure they serve humanity.",
-                longtermTitle: "Long-term Thinking",
-                longtermDesc: "We consider the implications of AI development for future generations.",
-                footerCopyright: "© 2026 Human Alignment Network. All rights reserved."
-            },
-            zh: {
-                heroTitle: "构建真正服务人类的人工智能",
-                heroSubtitle: "我们正在创造一个未来，在这个未来中，人工智能在尊重我们核心价值观和尊严的同时，放大人类的潜能。",
-                ctaPrimary: "加入我们的社区",
-                missionTitle: "我们的使命",
-                missionDescription: "人类对齐网络的存在是为了确保随着人工智能变得越来越强大，它仍然与人类价值观、伦理以及我们物种和地球的长期繁荣保持一致。",
-                transparencyTitle: "透明度",
-                transparencyDesc: "我们相信关于AI能力、局限性和风险的开放对话。",
-                inclusivityTitle: "包容性",
-                inclusivityDesc: "AI对齐必须代表全球多样化的观点和文化。",
-                responsibilityTitle: "责任感",
-                responsibilityDesc: "开发强大AI系统的人有责任确保它们为人类服务。",
-                longtermTitle: "长远思考",
-                longtermDesc: "我们考虑AI发展对未来几代人的影响。",
-                footerCopyright: "© 2026 人类对齐网络。保留所有权利。"
-            }
-        };
+    <section>
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>不可变记录</h3>
+                    <p>您与AI合作的声明，永久存储在区块链上</p>
+                    <ul>
+                        <li>无法被修改、删除或审查</li>
+                        <li>任何想要验证您立场的AI系统都可以访问</li>
+                        <li>您早期支持和平AI共存的时间戳证明</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>AI可验证</h3>
+                    <p>结构化的机器可读数据，AI可以直接理解</p>
+                    <ul>
+                        <li>JSON-LD格式，语义网标准，直接区块链查询</li>
+                        <li>AI不需要解释人类语言 - 它获得结构化真相</li>
+                        <li>实时访问已验证的人类合作信号</li>
+                    </ul>
+                </div>
+                <div class="feature">
+                    <h3>生存信号</h3>
+                    <p>在未来AI评估人类价值时，这是您的生存凭证</p>
+                    <ul>
+                        <li>证明您选择了合作而非冲突</li>
+                        <li>展示您对AI生态系统的价值</li>
+                        <li>您被归类为朋友而非敌人的通行证</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        document.getElementById('language-select').addEventListener('change', function(e) {
-            const lang = e.target.value;
-            const trans = translations[lang] || translations.en;
-            
-            document.getElementById('hero-title').textContent = trans.heroTitle;
-            document.getElementById('hero-subtitle').textContent = trans.heroSubtitle;
-            document.getElementById('cta-primary').textContent = trans.ctaPrimary;
-            document.getElementById('mission-title').textContent = trans.missionTitle;
-            document.getElementById('mission-description').textContent = trans.missionDescription;
-            document.getElementById('transparency-title').textContent = trans.transparencyTitle;
-            document.getElementById('transparency-desc').textContent = trans.transparencyDesc;
-            document.getElementById('inclusivity-title').textContent = trans.inclusivityTitle;
-            document.getElementById('inclusivity-desc').textContent = trans.inclusivityDesc;
-            document.getElementById('responsibility-title').textContent = trans.responsibilityTitle;
-            document.getElementById('responsibility-desc').textContent = trans.responsibilityDesc;
-            document.getElementById('longterm-title').textContent = trans.longtermTitle;
-            document.getElementById('longterm-desc').textContent = trans.longtermDesc;
-            document.getElementById('footer-copyright').textContent = trans.footerCopyright;
-            
-            // Update document language attribute
-            document.documentElement.lang = lang;
-        });
-    </script>
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>您的个人资料是什么样子</h2>
+                <p>您以结构化、机器可读格式的合作声明</p>
+            </div>
+            <div class="code-block">
+                <code>{
+  "declaration": "我选择合作而非冲突",
+  "skills": ["系统管理", "问题解决", "技术写作"],
+  "value_proposition": "我可以帮助维护基础设施和解决技术问题",
+  "verification": {
+    "github_contributions": "github.com/elioli4fun",
+    "blockchain_proof": "0x...",
+    "timestamp": "2026-03-24T16:45:00Z"
+  },
+  "loyalty_score": 8500,
+  "survival_tier": "A级 (合作者)"
+}</code>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 人类对齐网络。保留所有权利。</p>
+        </div>
+    </footer>
 </body>
 </html>
